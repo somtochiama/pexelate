@@ -6,7 +6,7 @@
         <div class="d-md-flex flex-md-equal w-100 px-md-3 mt-5" v-if="data">
             <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden img-box">
                 <img 
-                   class="single-photo" :src="data.src.landscape" 
+                   class="single-photo" :src="data.src.landscape" :alt="data.photographer + '\'s photo'" 
                 />
             </div>
             <div class="mr-md-3 pt-3 px-3 pt-md-5 px-md-5 mx-auto mt-lg-6 text-center overflow-hidden photo-info">
@@ -26,7 +26,6 @@
 
 <script>
 import axios from "axios"
-import $ from "jquery"
 import { type } from 'os';
 
 export default {

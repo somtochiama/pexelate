@@ -18,6 +18,7 @@
                 v-for="photo in photos"
                 :key="photo.id"
                 :src="photo.src.landscape"
+                :alt="photo.photographer + '\'s photo'"
                 @photo-clicked="viewPhoto(photo.id)"
               />
             </div>
@@ -86,6 +87,7 @@ export default {
             }
         })
         .then((response) => {
+          console.log(response)
           const next_page = response.data.next_page
           const prev_page = response.data.prev_page
           this.loading = false
@@ -122,7 +124,6 @@ export default {
       // react to route changes...
       console.log("watching")
       if (to.name === "search") {
-        console.log("heyy searching")
         let url = "https://api.pexels.com/v1/search"
         this.searchPhoto(url, to.query.plan)
       } else {

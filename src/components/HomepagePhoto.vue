@@ -1,5 +1,5 @@
 <template>
-    <div class="col-md-4 img-box" @click="$emit('photo-clicked')">
+    <div class="col-md-4 img-box" @click="emit('photo-clicked')">
         <div class="card my-4">
             <img :src="src" :alt="alt">
         </div>
@@ -12,7 +12,7 @@ export default {
     props: ['src', 'alt'],
     methods: {
         viewPhoto(id) {
-            $this.router.push('/')
+            this.router.push('/')
         }
     }
 }
