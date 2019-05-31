@@ -103,6 +103,7 @@ export default {
         })
     },
     viewPhoto(id) {
+      console.log(id)
       this.$router.push({name: "photo", params: {id}})
     }
   },
