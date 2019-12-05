@@ -4,7 +4,7 @@
       <main role="main">
         <section class="jumbotron jumbotron-fluid text-center main-banner">
           <div class="container">
-            <h1 class="display-4">Pexelate</h1>
+            <h1 class="display-4">Pexelate-y</h1>
             <p class="lead">Quickly find pictures from <a href="https://www.pexels.com/">Pexels</a></p>
           </div>
         </section>
@@ -27,7 +27,7 @@
       </main>
       <footer>
         <div class="container">
-          <pagination 
+          <pagination
             :next="next_url"
             :prev="prev_url"
             :page="page"
@@ -114,7 +114,7 @@ export default {
       console.log("search")
       url = "https://api.pexels.com/v1/search"
       this.searchPhoto(url, this.$route.query.plan)
-      
+
     } else {
       let url = "https://api.pexels.com/v1/curated?per_page=21&page=1";
       this.searchPhoto(url)
@@ -136,6 +136,3 @@ export default {
 
 };
 </script>
-
-
-
